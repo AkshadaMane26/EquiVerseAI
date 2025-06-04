@@ -38,14 +38,6 @@
 
 ---
 
-
-
-## AWS Architecture
-
-![Alt text](images/Frame.png)
-
-
-
 # 🚀 Getting Started
 
 ## Installation
@@ -90,10 +82,10 @@ streamlit run main.py
     - Click on "Process URLs" to fetch and analyze the articles.
 3.  Enter a query in the text input box and click "Submit" to get answers based on the processed data.
 
-## Example 1 URL :
+## Example:
 
-1.  enter 3 as number of urls
-2.  provide following urls:
+1.  Enter 3 as number of urls
+2.  Provide following urls:
     1. https://www.moneycontrol.com/news/business/tata-motors-to-use-new-1-billion-plant-to-make-jaguar-land-rover-cars-report-12666941.html
     2. https://www.moneycontrol.com/news/business/stocks/tata-motors-stock-jumps-x-after-robust-jlr-sales-brokerages-bullish-12603201.html
     3. https://www.moneycontrol.com/news/business/stocks/buy-tata-motors-target-of-rs-1188-sharekhan-12411611.html
@@ -104,8 +96,8 @@ streamlit run main.py
 
 👤 **Akshada Mane**
 
-- Github: [@mihirh19](https://github.com/mihirh19)
-- LinkedIn: [@mihir-hadavani-996263232](https://linkedin.com/in/mihir-hadavani-996263232)
+- Github: [@AkshadaMane](https://github.com)
+- LinkedIn: [@AkshadaMane](https://linkedin.com)
 
 ## Show your support
 Give a ⭐️ if this project helped you!
