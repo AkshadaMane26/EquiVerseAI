@@ -9,7 +9,6 @@
 - 🔗 **Multi-URL News Ingestion**: Input up to 3 article URLs from reliable sources.
 - 🧠 **AI-Powered Q&A**: Ask questions based on the content of the articles and receive summarized, accurate answers.
 - 🗂️ **Source-Linked Answers**: All insights are backed by clickable source URLs for verification.
-- 📄 **PDF Export**: Download any Q&A interaction in a well-formatted PDF document.
 - 🔄 **Session History**: View all your previous questions and answers during a session.
 - 🧩 **Progress Indicators**: Real-time updates during article loading, chunking, and vector creation.
 - 💬 **Interactive Chat UI**: Clean, responsive interface with Lottie animations and Streamlit Cards.
@@ -24,7 +23,6 @@
 - **Embeddings**: Google Generative AI Embeddings (`embedding-001`) to convert text to vector space.
 - **Vector Store**: FAISS (Facebook AI Similarity Search) for fast similarity-based document retrieval.
 - **Q&A Chain**: `RetrievalQAWithSourcesChain` from LangChain that connects the LLM to the vector store.
-- **PDF Output**: `fpdf2` for generating downloadable, readable Q&A documents.
 - **Styling & UX**: Streamlit extras like `streamlit-lottie`, `streamlit-card` for polished UI and feedback animations.
 
 ---
