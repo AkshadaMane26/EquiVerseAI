@@ -92,12 +92,15 @@ streamlit run main.py
 3.  Click "Process URLs" to start processing.
 4.  Enter a query like `what is the target price of tata motors ?` and click `Submit` to get the answer.
 
+## Project Screenshots 
+
+
 ## Author
 
 👤 **Akshada Mane**
 
-- Github: [@AkshadaMane](https://github.com)
-- LinkedIn: [@AkshadaMane](https://linkedin.com)
+- Github: [@AkshadaMane](https://github.com/AkshadaMane26w)
+- LinkedIn: [@AkshadaMane](https://www.linkedin.com/in/akshada-mane-b93738258)
 
 ## Show your support
 Give a ⭐️ if this project helped you!
