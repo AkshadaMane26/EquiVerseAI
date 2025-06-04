@@ -1,70 +1,50 @@
-![news_research_tool_Equity-Research-Analysis-](https://socialify.git.ci/mihirh19/news_research_tool_Equity-Research-Analysis-/image?description=1&font=Source%20Code%20Pro&logo=https%3A%2F%2Fgithub.com%2Fmihirh19%2Fnews_research_tool_Equity-Research-Analysis-%2Fassets%2F128199131%2F2acd1645-40a8-4d11-b63e-f4541f2db9f1&name=1&pattern=Circuit%20Board&theme=Light)
+# 📈 EquiVerse AI : Your AI-powered edge in equity analysis
 
-# 📈 FinGuru: News Research Tool
+**EquiVerse AI** empowers investors, analysts, and enthusiasts to explore, understand, and question equity market news through advanced AI-driven natural language capabilities. Just enter URLs of news articles, and get precise answers with reliable source references.
 
-FinGuru is a news research tool that processes and analyzes news articles from given URLs and PDF. It leverages LangChain, Google embeddings, and Streamlit to provide insights and answers based on the content of the articles.
+---
 
 ## 🎯 Features
 
-- Fetch and parse news articles from URLs Or parse data from given pdf
-- Split articles into manageable chunks
-- Create embeddings for the text using GoogleEmbedding Model
-- Store embeddings in a FAISS index for efficient retrieval
-- Query the processed data to get answers and sources
+- 🔗 **Multi-URL News Ingestion**: Input up to 3 article URLs from reliable sources.
+- 🧠 **AI-Powered Q&A**: Ask questions based on the content of the articles and receive summarized, accurate answers.
+- 🗂️ **Source-Linked Answers**: All insights are backed by clickable source URLs for verification.
+- 📄 **PDF Export**: Download any Q&A interaction in a well-formatted PDF document.
+- 🔄 **Session History**: View all your previous questions and answers during a session.
+- 🧩 **Progress Indicators**: Real-time updates during article loading, chunking, and vector creation.
+- 💬 **Interactive Chat UI**: Clean, responsive interface with Lottie animations and Streamlit Cards.
+
+---
 
 ## 🏗️ How It's Built
 
-- Python 3.7+
-- Streamlit
-- LangChain
-- Google API Key
-- GOOGLE_CSE_ID
+- **Frontend**: [Streamlit](https://streamlit.io/) for rapid, interactive UI development.
+- **Document Loading**: `WebBaseLoader` from LangChain to scrape and structure article content.
+- **Text Processing**: `RecursiveCharacterTextSplitter` breaks articles into meaningful chunks.
+- **Embeddings**: Google Generative AI Embeddings (`embedding-001`) to convert text to vector space.
+- **Vector Store**: FAISS (Facebook AI Similarity Search) for fast similarity-based document retrieval.
+- **Q&A Chain**: `RetrievalQAWithSourcesChain` from LangChain that connects the LLM to the vector store.
+- **PDF Output**: `fpdf2` for generating downloadable, readable Q&A documents.
+- **Styling & UX**: Streamlit extras like `streamlit-lottie`, `streamlit-card` for polished UI and feedback animations.
 
-## Used LLM
+---
 
-`google gemini-pro`
+## 🤖 Used LLM
+
+- **Model**: `gemini-1.5-flash-latest`  
+- **Provider**: [Google Generative AI](https://ai.google/discover/gemini/)
+- **Capabilities**: Efficient, accurate long-context question answering and summarization.
+- **Integration**: `ChatGoogleGenerativeAI` from LangChain's Google Generative AI wrapper.
+
+---
+
+
 
 ## AWS Architecture
 
 ![Alt text](images/Frame.png)
 
-# Equity Research Analysis
 
-![Alt text](images/image.png)
-![Alt text](images/image-1.png)
-
-### Tech Architecture
-
-    - Issue 1 : Copy pasting article in ChatGPt is tedious
-    - Issue 2 : We need an aggregate knowledge base
-
-![Alt text](images/image-2.png)
-![Alt text](images/image-3.png)
-
-### Revenue of apple
-
-![Alt text](images/image-5.png)
-
-### calories in apple
-
-![Alt text](images/image-4.png)
-
-`Semantic search`
-
-## Vector Database
-
-![Alt text](images/image-6.png)
-
-## Agents
-
-![Alt text](images/image-7.png)
-
-### Used Agents
-
-`Wikipedia`
-`Google Search`
-`Google Finance`
-`duckduckGo search `
 
 # 🚀 Getting Started
 
@@ -73,15 +53,14 @@ FinGuru is a news research tool that processes and analyzes news articles from g
 ### 1. Clone the repository:
 
 ```bash
-git clone https://github.com/mihirh19/news_research_tool_Equity-Research-Analysis-.git
-cd news_research_tool_Equity-Research-Analysis-
+git clone https://github.com/AkshadaMane26/EquiVerseAI-.git
 ```
 
 ### 2. Create and activate a virtual environment:
 
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+python -m venv myvenv
+source venv/bin/activate  # On Windows use `myvenv\Scripts\activate`
 ```
 
 ### 3. Install the required packages:
@@ -92,38 +71,24 @@ source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
 ## Setup
 
-1. First, you need to set up the proper API keys and environment variables. To set it up, create the GOOGLE_API_KEY in the Google Cloud credential console (https://console.cloud.google.com/apis/credentials) and a GOOGLE_CSE_ID using the Programmable Search Engine (https://programmablesearchengine.google.com/controlpanel/create). Next, it is good to follow the instructions found here.
-
-2. create api key on https://serpapi.com/
-
-### 3. Create a file named `secrets.toml` in the `.streamlit` directory with the following content:
-
-```toml
-GOOGLE_API_KEY = "your-google-api-key"
-GOOGLE_CSE_ID = "your-cse-id"
-SERP_API_KEY ="your-"
+1. First, you need to set up the proper API keys and environment variables. To set it up, create the GOOGLE_API_KEY in the Google Cloud credential console (https://console.cloud.google.com/apis/credentials) then create a .env file and paste that API Key in it as shown below.
+```bash
+   GOOGLE_API_KEY=YOUR_API_KEY
 ```
 
 ## Running the Application
 
 ```bash
-streamlit run app.py
+streamlit run main.py
 ```
 
 ## Usage
 
 1.  Open the Streamlit application in your browser.
-2.  Select options From dropdown Menu in the sidebar
-3.  For URL :
-    - Enter the number of URLs you want to process in the sidebar.
+2.  For URL :
     - Provide the URLs for the news articles.
     - Click on "Process URLs" to fetch and analyze the articles.
-4.  For pdf
-    - Upload a PDF.
-    - Click on "process Pdf" to analyze the PDF.
-5.  Enter a query in the text input box and click "Submit" to get answers based on the processed data.
-
-### You can also use the advance google search for financial questions.
+3.  Enter a query in the text input box and click "Submit" to get answers based on the processed data.
 
 ## Example 1 URL :
 
@@ -135,22 +100,12 @@ streamlit run app.py
 3.  Click "Process URLs" to start processing.
 4.  Enter a query like `what is the target price of tata motors ?` and click `Submit` to get the answer.
 
-## Example 2 PDF :
-
-1. [AnnualReport202223.pdf](https://github.com/mihirh19/news_research_tool_Equity-Research-Analysis-/files/15366094/AnnualReport202223.pdf) Upload the Given PDF
-
-2. Click "Process PDF" to start processing.
-3. Enter a query like `what is the yoy change of revenue of tata motors ? `and click `Submit` to get answer.
-
 ## Author
 
-👤 **Mihir Hadavani**
+👤 **Akshada Mane**
 
-- Twitter: [@mihirh21](https://twitter.com/mihirh21)
 - Github: [@mihirh19](https://github.com/mihirh19)
 - LinkedIn: [@mihir-hadavani-996263232](https://linkedin.com/in/mihir-hadavani-996263232)
 
 ## Show your support
-<a href="https://www.buymeacoffee.com/mihir21"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=mihir21&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
-
 Give a ⭐️ if this project helped you!
